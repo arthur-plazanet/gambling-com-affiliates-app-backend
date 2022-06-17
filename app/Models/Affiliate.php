@@ -27,7 +27,6 @@ class Affiliate extends Model
      * @return bool
      *
      */
-
     public function isCloseToOffice(): bool
     {
         $officeLatitude = deg2rad(Affiliate::OFFICE_LATITUDE);
