@@ -20,7 +20,7 @@ composer install
 ```sh
 ./vendor/bin/sail up
 ```
-In case you are using Linux and you get the message **Docker is not running.**, you will need a few extra steps to be able to run Docker as a non-root user (https://docs.docker.com/engine/install/linux-postinstall/).
+In case you are using Linux and you get the message **Docker is not running**, you will need a few extra steps to be able to run Docker as a non-root user (https://docs.docker.com/engine/install/linux-postinstall/).
 
 The route to get the corresponding affiliates data will be located at
 ```sh
