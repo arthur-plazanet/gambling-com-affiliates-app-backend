@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Interfaces\AffiliateRepositoryInterface;
 use App\Models\Affiliate;
+use Illuminate\Support\Collection;
 
 class AffiliateRepository implements AffiliateRepositoryInterface
 {
@@ -14,7 +15,13 @@ class AffiliateRepository implements AffiliateRepositoryInterface
         $this->file = file(config('constants.AFFILIATES_FILE_PATH'));
     }
 
-    public function getAllAffiliates()
+    /**
+     * Convert all affiliates from the file to Collection of Models
+     *
+     * @return Collection
+     *
+     */
+    public function getAllAffiliates(): Collection
     {
         $affiliates = collect([]);
 
