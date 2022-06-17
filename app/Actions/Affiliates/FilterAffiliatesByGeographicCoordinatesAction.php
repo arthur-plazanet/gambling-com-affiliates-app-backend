@@ -14,11 +14,11 @@ class FilterAffiliatesByGeographicCoordinatesAction
     public function execute(Collection $affiliates): Collection
     {
         $filteredAffiliates = collect([]);
-        foreach ($affiliates as $affiliate) {
+        $affiliates->each(function ($affiliate) use ($filteredAffiliates) {
             if ($affiliate->isCloseToOffice()) {
                 $filteredAffiliates->push($affiliate);
             }
-        }
+        });
         return $filteredAffiliates->sortBy(['affiliate_id']);
     }
 }
